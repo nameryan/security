@@ -25,3 +25,15 @@ this is a project process aes encrypt and decrpty , JNI packed, and use OPENSSL 
 6.  it will notice ": libsosec.so => libs/armeabi/libsosec.so" , copy this libsosec.so to libs path in your android project, then use JniHelp.java in the example code to use this so library.
 
 the main source code is in path sosec/myApp/, pls modify the code under this path ,don't modify the code outside myApp
+
+##Use:
+
+        final String srouce = "12374488";
+        final String key = "abcdefg12345";
+        Log.d("", "+++++++++++++++start encrypt+++++++++++++++");
+        String ciphterText = JniHelp.aesEncrypt(srouce, key);
+        Log.d("testAES", "ciphterText="+ciphterText);
+        
+        Log.d("", "---------------start decrypt---------------");
+        String plaintText = JniHelp.aesDecrypt(ciphterText, key);
+        Log.d("testAES", "plaintText="+plaintText);
