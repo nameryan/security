@@ -30,10 +30,8 @@ the main source code is in path sosec/myApp/, pls modify the code under this pat
 
         final String srouce = "12374488";
         final String key = "abcdefg12345";
-        Log.d("", "+++++++++++++++start encrypt+++++++++++++++");
-        String ciphterText = JniHelp.aesEncrypt(srouce, key);
-        Log.d("testAES", "ciphterText="+ciphterText);
         
-        Log.d("", "---------------start decrypt---------------");
+        String ciphterText = JniHelp.aesEncrypt(srouce, key);
         String plaintText = JniHelp.aesDecrypt(ciphterText, key);
-        Log.d("testAES", "plaintText="+plaintText);
+
+
